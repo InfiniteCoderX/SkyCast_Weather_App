@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Main meta tags -->
+
+    <title>SkyCast</title>
+    <meta name="title" content="SkyCast" />
+    <meta
+      name="description"
+      content="SkyCast the ultimate weather app.With its intuitive interface and comprehensive features, SkyCast offers a seamless experience.Receive up-to-the-minute weather updates for your current location or any location worldwide."
+    />
+
+    <!-- favicon -->
+    <!-- <link rel="stylesheet" href="favicon.svg" type="image/svg+xml" /> -->
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css link -->
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- js -->
+
+    <script type="module" src="app.js" type="module"></script>
+    <script type="module" src="route.js" type="module"></script>
+  </head>
+  <body>
+    <!-- header -->
+
+    <header class="header">
+      <div class="container">
+        <a href="#/weather?lat=28.6517178&lon=77.2219388" class="logo">
+          <img src="Images/logo_skycast.png" alt="logo" width="364" height="58" />
+        </a>
+
+        <div class="search-view" data-search-view>
+          <div class="search-wrapper">
+            <input
+              type="search"
+              id="search-field "
+              name="search"
+              placeholder="Search city..."
+              autocomplete="off"
+              class="search-field"
+              data-search-field
+            />
+
+            <span class="m-icon leading-icon">search</span>
+            <button
+              class="icon-btn leading-icon has-state"
+              aria-label="closesearch"
+              data-search-toggler
+            >
+              <span class="m-icon">arrow_back</span>
+            </button>
+          </div>
+
+          <div class="search-result" data-search-result></div>
+        </div>
+
+        <div class="header-actions">
+          <button
+            class="icon-btn has-state"
+            aria-label="open search"
+            data-search-toggler
+          >
+            <span class="m-icon">search</span>
+          </button>
+
+          <a
+            href="#/weather?lat=28.6517178&lon=77.2219388"
+            class="btn btn-primary has-state"
+            data-current-location-btn
+          >
+            <span class="m-icon">my_location</span>
+
+            <span class="span">Current Location</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <article class="container" data-container>
+        <div class="container-left">
+          <!-- current weather -->
+
+          <section
+            class="section current-weather"
+            aria-label="current weather"
+            data-current-weather
+          ></section>
+
+          <!-- forcast -->
+
+          <section
+            class="section forecast"
+            aria-labelledby="forecast-label"
+            data-5-day-forecast
+          ></section>
+        </div>
+
+        <div class="content-right">
+          <!-- hightlights -->
+
+          <section
+            class="section highlights"
+            aria-labelledby="highlights-label"
+            data-highlights
+          ></section>
+
+          <!-- Hourly Forecast -->
+
+          <section
+            class="section hourly-forecast"
+            aria-label="hourly forecast"
+            data-hourly-forecast
+          ></section>
+
+          <!-- footer -->
+
+          <footer class="footer">
+            <p class="body-3">
+              &copy; Copyright 2024 SkyCast. All Rights Reserved.
+            </p>
+
+            <p class="body-3">
+              Powered By
+              <a
+                href="https://openweathermap.org/api"
+                title="Free Weather Api"
+                target="_blank"
+                class="link"
+                rel="noopener"
+              >
+                <img
+                  src="Images/openweather.png"
+                  alt="OpenWeather"
+                  width="150"
+                  height="30"
+                  loading="lazy"
+                />
+              </a>
+            </p>
+          </footer>
+        </div>
+
+        <div class="loading" data-loading></div>
+      </article>
+    </main>
+
+    <!-- Error (404) section -->
+
+    <section class="error-content" data-error-content>
+      <h2 class="heading">404</h2>
+
+      <p class="body-1">Page Not Found</p>
+      <p class="body-1">Kindly check internet connection...</p>
+
+      <a href="#/weather?lat=21.1498134&lon=79.0820556" class="btn-primary">
+        <span class="span">Go Home</span>
+      </a>
+    </section>
+  </body>
+</html>
