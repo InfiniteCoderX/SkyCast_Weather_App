@@ -13,7 +13,7 @@ Welcome to SkyCast, your ultimate weather companion powered by the OpenWeather A
 
 ## Demo
 <ul>
-  <li><a src="https://www.linkedin.com/feed/update/urn:li:activity:7180893786229587968/">Click here to see Skycast demo</a></li>
+  <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7180893786229587968/">Click here to see Skycast demo</a></li>
 </ul>
 
 ## Key Features :-
